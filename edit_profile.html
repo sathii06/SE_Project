@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nunito-font.css') }}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #005b8c;
+        }
+    </style>
+</head>
+<body class="form-v9">
+         <a href="{{ url_for('student_home') }}" class="back-button">Back</a>
+        <div class="page-content">
+            <div class="form-v9-content"> 
+                <form class="form-detail" method="post">
+                    <h1 style="text-align:center;">Edit Profile</h1>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="First_name">First name:</label>
+                            <br>
+                            <input style="width: 650px;" type="text" id="First_name" name="First_name" value="{{ user.First_name }}">   
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Last_name">Last name:</label>
+                            <br>
+                            <input style="width: 650px;" type="text" id="Last_name" name="Last_name" value="{{ user.Last_name }}">    
+                        </div>
+                    </div>    
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Email">Email:</label>
+                            <input style="width: 650px;" type="text" id="Email" name="Email" value="{{ user.Email }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Clark_ID">Clark ID:</label>
+                            <input style="width: 650px;" type="text" id="Clark_ID" name="Clark_ID" value="{{ user.Clark_ID }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Intake_year">Intake Year:</label>
+                            <input style="width: 650px;" type="text" id="Intake_year" name="Intake_year" value="{{ user.Intake_year }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Intake_term">Intake Term:</label>
+                            <input style="width: 650px;" type="text" id="Intake_term" name="Intake_term" value="{{ user.Intake_term }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Pronouns">Pronouns:</label>
+                            <input style="width: 650px;" type="text" id="Pronouns" name="Pronouns" value="{{ user.Pronouns }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <label for="Phone">Phone:</label>
+                            <input style="width: 650px;" type="text" id="Phone" name="Phone" value="{{ user.Phone }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row-total">
+                        <div class="form-row">
+                            <input style="width: 680px;" type="submit" value="Update Profile">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>                    
+</body>
+</html>

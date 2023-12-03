@@ -1,0 +1,92 @@
+<!--
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Application Status</title>
+</head>
+<body>
+    <h1>TA Application Requests</h1>
+    <table border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Application Date</th>
+            <th>Status</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.A_Course_name }}</td>
+            <td>{{ row.A_Course_code }}</td>
+            <td>{{ row.A_Submission_date}}</td>
+            <td>{{ row.A_Status }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Status</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            text-align: center;
+            padding: 20px;
+        }
+        table {
+            margin: 0 auto; /* Center the table */
+            width: 80%; /* Set the width of the table */
+            border-collapse: collapse; /* Add border-collapse to prevent double borders */
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black; /* Add border to cells */
+        }
+        th {
+            background-color: #f2f2f2; /* Add background color to header cells */
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #005b8c;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('student_home') }}" class="back-button">Back</a>
+    <h1>TA Application Requests</h1>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Application Date</th>
+            <th>Status</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.A_Course_name }}</td>
+            <td>{{ row.A_Course_code }}</td>
+            <td>{{ row.A_Submission_date}}</td>
+            <td>{{ row.A_Status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

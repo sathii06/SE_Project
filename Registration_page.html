@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nunito-font.css') }}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="form-v9">
+	<div class="page-content" > <!-- style="background-image: url('{{ url_for('static', filename='bgclark.jpg') }}')"> -->
+		<div class="form-v9-content"> 
+			<form class="form-detail" action="/register1" method="post">
+				<br><br><h2 style="color:skyblue;"> Student Registration Form</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="First_name" id="First_name" class="input-text" placeholder="First Name" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Last_name" id="Last_name" class="input-text" placeholder="Last Name" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Email" id="Email" class="input-text" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@clarku\.edu" title="Please enter a valid email address ending with @clarku.edu">
+					</div>
+					<div class="form-row">
+						<input type="text" name="Clark_ID" id="Clark_ID" class="input-text" placeholder="Clark ID" required pattern="C\d{8}" title="Please enter a valid Clark ID starting with 'C' followed by 8 digits">
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Intake_year" id="Intake_year" class="input-text" placeholder="Year of Intake" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Intake_term" id="Intake_term" class="input-text" placeholder="Intake Term" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Pronouns" id="Pronouns" class="input-text" placeholder="Pronouns" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Phone" id="Phone" class="input-text" placeholder="Mobile Number" required pattern="[0-9]+" title="Please enter only numeric characters">
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row" style='width:750px; ;'>
+						<input style="text-align: center;" type="password" name="Password" id="Password" class="input-text" placeholder="Create Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+						title="Password must be at least 8 characters long and include at least one letter, one number, and one special character">
+					</div>
+				</div>
+				<div class="form-row-last">
+					<!--<button class="register" onclick="location.href='Next_page.html'" type="button">Next Page</button>-->
+					<input class="register" type="submit" value="Next Page">
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</body>
+</html>

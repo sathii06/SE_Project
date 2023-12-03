@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Login</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nunito-font.css') }}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="form-v9" >
+	<div class="page-content" style="background-image: url('{{ url_for('static', filename='bgclark.jpg') }}')">
+		<div class="form-v9-content" >  
+			<form class="form-detail" action="/login" method="post">
+				<h2 style="color:white;">Student Login</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Username" id="Username" class="input-text" placeholder="Enter Username" required>
+					</div>
+                
+					<div class="form-row">
+						<input type="password" name="Password" id="Password" class="input-text" placeholder="Enter Password" required>
+					</div>
+                </div>
+				
+				<div class="form-row-last" > 
+					<input type="submit" name="Submit" class="register" value="Submit">	
+				</div>
+                <div style="text-align: center;">
+                    <p style="color:white;">Don't have an account? <a href="index.html" >
+                        <!--<p style="color:white;">Create a new account</p></a> -->
+                    </p>
+                    <p> <a style="color:orange;" href="Registration_page.html" >Create account</a></p>
+                </div>
+			</form>
+           
+		</div>
+	</div>
+</body>
+</html>

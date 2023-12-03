@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nunito-font.css') }}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="form-v9">
+	<div class="page-content" style="background-image: url('{{ url_for('static', filename='bgclark.jpg') }}')">
+		<div class="form-v9-content"> 
+			<form class="form-detail" action="/applyTA" method="post">
+				<br><br><h2 style="color:skyblue;"> TA Application Form</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="A_Course_name" id="A_Course_name" class="input-text" placeholder="Course Name" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="A_Course_code" id="A_Course_code" class="input-text" placeholder="Course Code" required>
+					</div>
+				</div>
+                
+
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="A_Prev_taken" id="A_Prev_taken" class="input-text" placeholder="Taken this course at Clark before ?" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="A_Total_hours" id="A_Total_hours" class="input-text" placeholder="Total # hours you can offer/week" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="A_Experience" id="A_Experience" class="input-text" placeholder="Any Teaching experience? (Yes/No)" required>	
+					</div>
+					<div class="form-row">
+						<input type="text" name="A_Grade" id="A_Grade" class="input-text" placeholder="Enter Grade if taken" required>
+					</div>
+				</div>
+				
+				<div class="form-row-total">
+					<div class="form-row" style='width:750px; ;'>
+                        <input style="text-align: center;" type="text" name="A_Availability" id="A_Availability" class="input-text" placeholder="Can you accommodate the time asked in handshake ? (Yes/No)" required>
+					</div>
+				</div>
+				<div class="form-row-last">
+					<!--<button class="register" onclick="location.href='Next_page.html'" type="button">Next Page</button>-->
+					<input class="register" type="submit" value="Submit">
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</body>
+</html>

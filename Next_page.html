@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Courses</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nunito-font.css') }}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script>
+        // Function to add dynamic input fields
+        function addFields() {
+            // Create input elements
+            const div = document.createElement('div');
+            div.innerHTML = '<br><hr><label for="A"></label> <input type="text" name="A[]" placeholder="Enter Course Name">'+
+                            '<br><br><label for="B"></label> <input type="text" name="B[]" placeholder="Course Code">' +
+                            '<br><br><label for="C"></label> <input type="text" name="C[]" placeholder="Faculty Email">'+
+                            '<br><br><label for="D"></label> <input type="text" name="D[]" placeholder="Year of Enrollment">'+
+                            '<br><br><label for="E"></label> <input type="text" name="E[]" placeholder="Term (Fall/Spring/Summer)">'+
+                            '<br><br><label for="F"></label> <input type="text" name="F[]" placeholder="Grade Achieved"> ';
+            
+            // Append the new input fields to the form
+            document.getElementById('dynamic-fields').appendChild(div);
+        }
+    </script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="css/nunito-font.css">
+
+    <link rel="stylesheet" href="style.css"/>
+
+   
+
+</head>
+<body class="form-v9">
+	<div class="page-content" style="background-image: url('{{ url_for('static', filename='bgclark.jpg') }}')">
+		<div class="form-v9-content" > <!-- style="background-image: url('bgclark.jpg')" -->
+			<form class="form-detail" action="/final" method="post">
+				<h2>Update Your Course Details</h2>
+				
+                <div id="dynamic-fields">
+                    <button type="button" onclick="addFields()">Add Course</button>
+                </div>
+                
+
+				<div class="form-row-last">
+                    <input type="hidden" name="First_name" value="{{ First_name }}">
+                    <input type="hidden" name="Last_name" value="{{ Last_name }}">
+                    <input type="hidden" name="Pronouns" value="{{ Pronouns }}">
+                    <input type="hidden" name="Email" value="{{ Email }}">
+                    <input type="hidden" name="Clark_ID" value="{{ Clark_ID }}">
+                    <input type="hidden" name="Intake_year" value="{{ Intake_year }}">
+                    <input type="hidden" name="Intake_term" value="{{ Intake_term }}">
+                    <input type="hidden" name="Phone" value="{{ Phone }}">
+                    <input type="hidden" name="Password" value="{{ Password }}">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
